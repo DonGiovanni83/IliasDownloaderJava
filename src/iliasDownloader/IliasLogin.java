@@ -3,8 +3,10 @@
  */
 package iliasDownloader;
 import java.io.IOException;
+import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 /**
@@ -54,7 +56,16 @@ public class IliasLogin extends ChromeSession {
 		//submit credentials
 		WebElement submit = driver.findElement(By.xpath(LOGIN_XPATH));
 		submit.click();
+		Set<Cookie> cookieSet = this.driver.manage().getCookies();
+		System.out.println("\n---------------------After Login Cookies----------------------");
+		for(Cookie c : cookieSet) {
+			System.out.println("---> "+c.toString());
+		}
 		System.out.println("\n---------------------Logging in on Ilias----------------------");
 
 		}
+	
+	public String[] getCreds() {
+		return new String[]{this.username, this.password};
+	}
 }

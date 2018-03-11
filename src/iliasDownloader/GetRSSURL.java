@@ -16,7 +16,7 @@ import org.openqa.selenium.WebElement;
  * @author root
  *
  */
-public class GetRSSURL extends IliasLogin{
+public class GetRSSURL extends IliasSession{
 	private String RSSURL;
 	final String RSSBUTTON_XPATH = "//*[@id=\"block_pdnews_0\"]/div/div[7]/a/span";
 	final String RSS_XPATH = "//*[@id=\"block_pdcontent_0\"]/div/div[2]/p[3]/a";
@@ -40,7 +40,7 @@ public class GetRSSURL extends IliasLogin{
 			
 			if(bfread.readLine()==null){				
 				//Search RSS-Link on ilias
-				WebElement rssButton = super.driver.findElement(By.xpath(RSSBUTTON_XPATH));
+				WebElement rssButton = this.driver.findElement(By.xpath(RSSBUTTON_XPATH));
 				rssButton.click();
 				
 				//Copy Link and write it into the .txt File

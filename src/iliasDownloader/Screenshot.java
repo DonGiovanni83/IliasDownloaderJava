@@ -22,11 +22,11 @@ public class Screenshot {
 		this.driver = driver;
 	}
 	
-	public void take() throws IOException{
+	public void take(String name) throws IOException{
 		//take screenshot
 		try {
 			File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(scrFile, new File("/root/Documents/Programming/Projects/IliasDownloaderJava/screenshot.png"));
+			FileUtils.copyFile(scrFile, new File("/root/Documents/Programming/Projects/IliasDownloaderJava/"+name+".png"));
 		}
 		catch(IOException e) {
 			System.out.println("Error occured : " + e.getMessage());

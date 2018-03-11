@@ -1,12 +1,12 @@
-/**
- * 
- */
+
 package iliasDownloader;
 
 import java.io.Console;
 import java.util.Scanner;
 
 /**
+ * Login interface in the terminal. Credentials of the user are beeing
+ * captured and stored
  * @author root
  *
  */
@@ -16,6 +16,7 @@ public class UserLogin {
 	
 	public UserLogin() {
 		Scanner scan = new Scanner(System.in);
+		//uses Console to mask the passwort with blank characters
 		Console cons = System.console();
 		
 		System.out.print("\nEnter your username : ");
