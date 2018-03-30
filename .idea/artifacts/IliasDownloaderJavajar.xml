@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="IliasDownloaderJavajar">
+    <output-path>$PROJECT_DIR$</output-path>
+    <root id="archive" name="IliasDownloaderJava.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="IliasDownloaderJava" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../selenium-java-3.10.0/client-combined-3.10.0-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/usr/local/bin/selenium-server-standalone.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../selenium-java-3.10.0/client-combined-3.10.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

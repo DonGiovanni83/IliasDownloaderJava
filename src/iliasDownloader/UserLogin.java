@@ -16,14 +16,14 @@ public class UserLogin {
 	
 	public UserLogin() {
 		Scanner scan = new Scanner(System.in);
-		//uses Console to mask the passwort with blank characters
+		//uses Console to mask the password with blank characters
 		Console cons = System.console();
 		
 		System.out.print("\nEnter your username : ");
 		this.username = scan.nextLine();
 		System.out.print("Enter your password : ");
 		char[] passString = cons.readPassword();
-	    this.password = new String(passString );
+	    this.password = new String(passString);
 	    
 		scan.close();
 		
